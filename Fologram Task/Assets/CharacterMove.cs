@@ -10,5 +10,6 @@ public class CharacterMove : MonoBehaviour
         // Move the controller
         transform.eulerAngles += new Vector3(0, Input.GetAxis("Horizontal"), 0) * speed;
         if (Input.GetAxis("Vertical") > 0) transform.position += transform.forward * Time.deltaTime * speed;
+        if (Input.GetAxis("Vertical") < 0) transform.position -= transform.forward * Time.deltaTime * speed;
     }
 }
